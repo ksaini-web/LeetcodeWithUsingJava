@@ -1,0 +1,22 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        int    missing_number = nums.length;
+
+        Arrays.sort(nums);
+
+        for(int i =0 ;i<nums.length ; i++){
+
+            if(nums[i] != i){
+
+               missing_number= i;
+
+                 break;
+            }
+        }
+
+        return missing_number;
+
+        
+        
+    }
+}
